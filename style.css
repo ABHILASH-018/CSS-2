@@ -4,12 +4,17 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100vh;
+    overflow: hidden;
+}
+
 div {
     border: 15px solid blueviolet;
     text-align: center;
-    margin: 40px auto;
-    width: 450px;
-    height: 450px;
+    margin: 10vh 25vw;
+    width: calc(100vw - 50vw);
+    height: calc(100vh - 20vh);
 }
 
 .head {
@@ -23,8 +28,9 @@ div {
 }
 
 .main {
-    height: 360px; /* 450px total height - 30px border - 60px header */
-    position: relative;
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
     border: 5px;
     text-align: center;
     color: blue;
@@ -33,9 +39,10 @@ div {
 }
 
 #IMAGE {
-    height: 310px; /* Leave space for footer */
+    flex: 1;
     color: white;
     padding-top: 15px;
+    overflow: hidden;
 }
 
 img {
@@ -47,15 +54,22 @@ img {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     height: 50px;
-    padding: 15px 0;
+    padding: 10px 0;
     border: 5px;
     text-align: center;
-    color: black;
-    background-color: blue;
     border-radius: 0px;
+}
+
+button {
+    background: linear-gradient(to right, #1a1aff, #8a2be2);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    padding: 5px 30px;
+    cursor: pointer;
+    border-radius: 4px;
 }
